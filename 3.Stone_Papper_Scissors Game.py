@@ -1,11 +1,14 @@
-print("This is a stone ,papper,scissors game")
 import random
+
 execute_count = 0
 win_count = 0
 lose_count = 0
+
 def again():
      global play_again
      play_again = input("Do you want to play again? press(yes for y) or (no for n):")
+     
+     
 while True:    
      user_choice = input("Enter your choice(stone/paper/scissor):")
      computer_choice = random.choice(['stone','paper','scissor'])
