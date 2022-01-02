@@ -1,5 +1,3 @@
-print("voting system mini project.")
-
 #first getting the nominee names.
 nominee1 = input("Enter the name of first nominee:")
 nominee2 = input("Enter the name of second nominee:")
@@ -18,17 +16,20 @@ while True:
         print("The voting session is over !!!")
         print("Total number of votes is",no_of_voters)
         print("Number of voters participated in the election",total_votes)
+        
         if nm1_votes + nm2_votes == total_votes : 
            if nm1_votes > nm2_votes:
               print(f"{nominee1} has {nm1_votes} votes") 
               diff = nm1_votes - nm2_votes
               print(f"{nominee1} has won the election with {diff} majority votes")
               break
+            
            elif nm2_votes > nm1_votes:
               print(f"{nominee2} has {nm2_votes} votes") 
               diff = nm2_votes - nm1_votes
               print(f"{nominee2} has won the election with {diff} majority votes")
               break
+            
            else:
                print(f"{nominee1} has {nm1_votes} votes")
                print(f"{nominee2} has {nm2_votes} votes")
@@ -43,16 +44,19 @@ while True:
            print(f"To give the vote for {nominee2} press 2")
            print("----------------------------------------")
            vote = int(input("Enter your vote:"))
+            
            if vote == 1:
               nm1_votes += 1
               total_votes += 1
               print(f"Thank you for your vote to the {nominee1}")
               print("------------------------------------------")
+            
            elif vote == 2:
               nm2_votes += 1
               total_votes += 1
               print(f"Thank you for your vote to the {nominee2}")
               print("------------------------------------------")
+            
            elif vote > 2:
               print("check your pressed key !!")
               print("------------------------------------------")
