@@ -72,7 +72,8 @@ def decryption(mats):
     for i in result:
         for j in i:
             string += get_key(j, 2)
-    print("Your Decrypted message:", string)
+    string1 = string.lower()        
+    print("Your Decrypted message:", string1)
     code_choice()
 
 def my_dec():
@@ -84,7 +85,6 @@ def my_dec():
     nested_code = []
     nested_code = [new_str_code[i : i+3] for i in range(0,len(new_str_code) , 3)]
     nested_array = np.array(nested_code) #formatting the nx3 matrix
-    print("Encoded Message number matrix:",nested_array)
     #passing the value to decryption array
     decryption(nested_array)
 
